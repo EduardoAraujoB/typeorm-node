@@ -1,3 +1,5 @@
+import 'reflect-metadata';
+
 import './bootstrap';
 
 import express from 'express';

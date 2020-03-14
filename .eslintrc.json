@@ -30,7 +30,10 @@
         "ts": "never",
         "tsx": "never"
       }
-    ]
+    ],
+    "import/prefer-default-export": "off",
+    "class-methods-use-this": "off",
+    "@typescript-eslint/class-name-casing": "off"
   },
   "settings": {
     "import/extensions": [".js", ".jsx", ".ts", ".tsx"],
