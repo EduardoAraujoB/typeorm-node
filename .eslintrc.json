@@ -33,7 +33,9 @@
     ],
     "import/prefer-default-export": "off",
     "class-methods-use-this": "off",
-    "@typescript-eslint/class-name-casing": "off"
+    "@typescript-eslint/class-name-casing": "off",
+    "camelcase": "off",
+    "object-curly-newline": "off"
   },
   "settings": {
     "import/extensions": [".js", ".jsx", ".ts", ".tsx"],
