@@ -13,6 +13,8 @@ class App {
 
   public constructor() {
     this.express = express();
+
+    this.routes();
   }
 
   public routes(): void {
@@ -20,7 +22,6 @@ class App {
   }
 
   public async startServer(): Promise<void> {
-    this.routes();
     await databaseConnection();
     this.express.listen(process.env.APP_PORT);
   }
