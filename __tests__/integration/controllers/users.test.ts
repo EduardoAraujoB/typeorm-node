@@ -19,4 +19,16 @@ describe('User', () => {
 
     expect(response.status).toBe(200);
   });
+
+  it('should be able to store a new user', async () => {
+    const response = await request(app.express)
+      .post('/users')
+      .send({
+        name: 'name',
+        email: 'mail@mail.com',
+        password_hash: 'password',
+      });
+
+    expect(response.status).toBe(200);
+  });
 });
