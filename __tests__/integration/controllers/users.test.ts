@@ -5,6 +5,7 @@ import { databaseConnection } from '../../../src/database/Connection';
 import app from '../../../src/app';
 
 import truncate from '../../util/truncate';
+import factory from '../../factories';
 
 describe('User', () => {
   let connection: Connection;
@@ -27,13 +28,11 @@ describe('User', () => {
   });
 
   it('should be able to store a new user', async () => {
+    const user: object = await factory.attrs('User');
+
     const response = await request(app.express)
       .post('/users')
-      .send({
-        name: 'name',
-        email: 'mail@mail.com',
-        password: 'password',
-      });
+      .send(user);
 
     expect(response.status).toBe(200);
   });
