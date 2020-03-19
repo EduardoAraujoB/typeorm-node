@@ -32,7 +32,7 @@ describe('User', () => {
       .send({
         name: 'name',
         email: 'mail@mail.com',
-        password_hash: 'password',
+        password: 'password',
       });
 
     expect(response.status).toBe(200);
