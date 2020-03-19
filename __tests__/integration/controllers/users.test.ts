@@ -4,10 +4,16 @@ import request from 'supertest';
 import { databaseConnection } from '../../../src/database/Connection';
 import app from '../../../src/app';
 
+import truncate from '../../util/truncate';
+
 describe('User', () => {
   let connection: Connection;
   beforeAll(async () => {
     connection = await databaseConnection();
+  });
+
+  beforeEach(async () => {
+    await truncate(connection);
   });
 
   afterAll(async () => {
