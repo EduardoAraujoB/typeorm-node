@@ -21,6 +21,7 @@
   },
   "plugins": ["@typescript-eslint"],
   "rules": {
+    "semi": "off",
     "import/extensions": [
       "error",
       "ignorePackages",
